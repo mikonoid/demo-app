@@ -17,6 +17,6 @@ RUN apk update \
 
 RUN chmod +x /start.sh
 
-EXPOSE 8088
+EXPOSE 8000
 
 CMD ["/start.sh"]
