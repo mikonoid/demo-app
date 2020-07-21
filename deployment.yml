@@ -4,7 +4,6 @@ metadata:
   name: demo-app
 spec:
   replicas: 1
-  revisionHistoryLimit: 3
   selector:
     matchLabels:
       app: demo-app
