@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-app
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: demo-app
+  template:
+    metadata:
+      labels:
+        app: demo-app
+    spec:
+      containers:
+      # modify the following line with your Docker Hub account name
+      - image: index.docker.io/mk51/demo-app:latest
+        name: demo-app
+        ports:
+        - containerPort: 8080
