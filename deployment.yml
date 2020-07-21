@@ -17,4 +17,4 @@ spec:
       - image: index.docker.io/mk51/demo-app:latest
         name: demo-app
         ports:
-        - containerPort: 8080
+        - containerPort: 8000
