@@ -77,6 +77,6 @@ jobs:
           git commit -m "Auto updating deployment with tag ${GITHUB_SHA}"
       - name: Push changes
         uses: ad-m/github-push-action@master
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            force: true
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
