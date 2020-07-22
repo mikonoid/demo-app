@@ -56,7 +56,7 @@ jobs:
       - name: Push image for master branch
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: |
-          VERSION=$BUILD_NUMBER
+          VERSION=${GITHUB_SHA}
           
           echo IMAGE=$IMAGE
           echo VERSION=$VERSION
