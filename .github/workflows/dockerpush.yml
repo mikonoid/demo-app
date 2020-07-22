@@ -65,5 +65,5 @@ jobs:
           docker push "$REGISTRY/$IMAGE:$VERSION"
 
       - name: Replace image tag in deployment
-        run: sed -E -i ''  's/(.*demo-app:).*/\1${GITHUB_SHA}/' deployment.yml
+        run: sed -E -i "s/(.*demo-app:).*/\1${GITHUB_SHA}/" deployment.yml
         
