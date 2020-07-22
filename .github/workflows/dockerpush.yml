@@ -64,8 +64,6 @@ jobs:
           docker tag "$IMAGE" "$REGISTRY/$IMAGE:$VERSION"
           docker push "$REGISTRY/$IMAGE:$VERSION"
 
-      - name: Replace image in config
-        uses: ./.github/actions/replace
-        with:
-          files: deployment.yml
-          replacements: 'index.docker.io/mk51/demo-app:*=index.docker.io/mk51/demo-app:${GITHUB_SHA}'
+      - name: Replace image tag in deployment
+        run: sed -E -i ''  's/(.*demo-app:).*/\1${GITHUB_SHA}/' deployment.yml
+        
