@@ -13,7 +13,7 @@ spec:
         app: demo-app
     spec:
       containers:
-      - image: index.docker.io/mk51/demo-app:c76574f0994a9ec5765ef27e37ecea1767412622
+      - image: index.docker.io/mk51/demo-app:529c0b500887e474006f6db4ff94ab0c6cf8b92c
         name: demo-app
         ports:
         - containerPort: 8000
