@@ -65,7 +65,7 @@ jobs:
           docker push "$REGISTRY/$IMAGE:$VERSION"
 
       - name: Replace image tag in deployment
-        run: sed -E -i ''  's/(.*demo-app:).*/\1${GITHUB_SHA}/' deployment.yml
+        run: sed -E -i  "s/(.*demo-app:).*/\1${GITHUB_SHA}/" deployment.yml
 
       - name: switching from HTTPS to SSH
         run: git remote set-url origin ${{ secrets.ssh }}
@@ -79,3 +79,4 @@ jobs:
         run: git fetch origin master
       - name: push code to master
         run: git push origin HEAD:master
+        
