@@ -4,6 +4,8 @@ FROM alpine:latest
 
 MAINTAINER M.Ivanov mikonoid@gmail.com
 
+WORKDIR /var/www
+
 COPY . .
 
 RUN apk update \
@@ -16,6 +18,7 @@ RUN apk update \
     && rm /etc/nginx/nginx.conf \
     && mv /nginx.conf /etc/nginx/nginx.conf
 
+ADD
 
 RUN chmod +x /start.sh
 
