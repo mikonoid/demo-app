@@ -68,4 +68,4 @@ jobs:
         uses: ./.github/actions/replace
         with:
           files: deployment.yml
-          replacements: 'index.docker.io/mk51/demo-app:*=index.docker.io/mk51/demo-app:${GITHUB_SHA}' 
+          replacements: 'index.docker.io/mk51/demo-app:*=index.docker.io/mk51/demo-app:${GITHUB_SHA}'
