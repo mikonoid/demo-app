@@ -18,8 +18,6 @@ RUN apk update \
     && rm /etc/nginx/nginx.conf \
     && mv /nginx.conf /etc/nginx/nginx.conf
 
-ADD
-
 RUN chmod +x /start.sh
 
 EXPOSE 8000
