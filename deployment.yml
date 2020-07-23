@@ -13,7 +13,6 @@ spec:
         app: demo-app
     spec:
       containers:
-      # modify the following line with your Docker Hub account name
       - image: index.docker.io/mk51/demo-app:latest
         name: demo-app
         ports:
